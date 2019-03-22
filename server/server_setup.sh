@@ -48,7 +48,7 @@ pip install --upgrade uwsgi
 
 # clone the repo:
 cd /apps
-git clone https://github.com/talkpython/data-driven-web-apps-with-pyramid-and-sqlalchemy app_repo
+git clone https://github.com/ruslan-baichurin/pypi_web.git
 
 # Setup the web app:
 cd /apps/app_repo/src/ch15-deploy/final/pypi_deploy
