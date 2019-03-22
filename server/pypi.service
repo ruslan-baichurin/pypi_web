@@ -3,8 +3,8 @@ Description=uWSGI PyPI server instance
 After=syslog.target
 
 [Service]
-ExecStart=/apps/pypi_web/venv/bin/uwsgi -H /apps/pypi_web/venv --ini-paste /apps/pypi_web/production.ini
-RuntimeDirectory=/apps/pypi_web/
+ExecStart=/apps/pypi_web/venv/bin/uwsgi -H /apps/pypi_web/venv --ini-paste /apps/pypi_web/app_repo/production.ini
+RuntimeDirectory=/apps/pypi_web/app_repo/pypi_web/
 Restart=always
 KillSignal=SIGQUIT
 Type=notify

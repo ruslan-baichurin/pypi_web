@@ -56,7 +56,7 @@ cd /apps/app_repo/src/ch15-deploy/final/pypi_deploy
 python setup.py develop
 
 # Copy and enable the daemon
-cp /apps/app_repo/src/ch15-deploy/final/pypi_deploy/server/pypi.service /etc/systemd/system/
+cp /apps/pypi_web/app_repo/server/pypi.service /etc/systemd/system/
 
 systemctl start pypi
 systemctl status pypi
