@@ -1,0 +1,82 @@
+body {
+    color: #222;
+    background: #fff;
+    margin: 0px;
+    padding: 0px;
+}
+
+.starter-template .content .lead .font-normal {
+    color: #000;
+}
+
+.starter-template .content .lead,
+.starter-template .content h1 .smaller {
+    color: #2495f2;
+}
+
+.starter-template .links ul li a, a {
+    color: #2495f2;
+    text-decoration: none;
+}
+
+.starter-template .links ul li:hover .icon-muted,
+.starter-template .links ul li a:hover, a:hover {
+    color: #000;
+}
+
+.starter-template .links ul li:hover a, a:hover {
+    text-decoration: underline;
+}
+
+.starter-template .links ul li .icon-muted {
+    color: #2495f2;
+}
+
+.starter-template .copyright {
+    color: #666;
+}
+
+.starter-template {
+    margin-top: 0px;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-dark .navbar-collapse {
+    border-color: #02377c;
+    color: white;
+}
+
+.navbar-dark {
+    background-color: #0073b7;
+    border-color: #0067a3;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-dark .navbar-nav > a, .navbar-dark .navbar-nav > a:hover, .navbar-dark .navbar-nav > a:focus {
+    color: #fff;
+    background-color: #024bbf;
+}
+
+.navbar-dark .navbar-brand, .navbar-dark .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-dark .navbar-brand:hover {
+    text-decoration: underline;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: #eee;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.starter-template {
+    margin-left: 0px;
+}

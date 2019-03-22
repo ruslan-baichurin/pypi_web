@@ -1,0 +1,66 @@
+<!DOCTYPE html metal:define-macro="layout">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="PyPI demo site built with Pyramid framework">
+    <meta name="author" content="Ruslan Baichurin">
+    <link rel="shortcut icon" href="${request.static_url('pypi_web:static/img/pyramid-16x16.png')}">
+
+    <title>Python Package Index Demo</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic|Source+Code+Pro:500">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- Custom styles for this scaffold -->
+    <link href="${request.static_url('pypi_web:static/css/theme.css')}" rel="stylesheet">
+    <link href="${request.static_url('pypi_web:static/css/theme-overrides.css')}" rel="stylesheet">
+    <link href="${request.static_url('pypi_web:static/css/site.css')}" rel="stylesheet">
+    <div metal:define-slot="additional-css" tal:omit-tag></div>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="nav-container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="/"><img src="/static/img/pypi-logo.svg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Donate</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="/account/login" tal:condition="not user_id">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="/account/register" id="last_nav_link" tal:condition="not user_id">Register</a></li>
+
+        <li class="nav-item"><a class="nav-link" href="/account" tal:condition="user_id">Account</a></li>
+        <li class="nav-item"><a class="nav-link" href="/account/logout" id="last_nav_link" tal:condition="user_id">Logout</a></li>
+        </ul>
+        </div>
+        </nav>
+    </div>
+
+    <div class="starter-template">
+        <div metal:define-slot="content">No content</div>
+    </div>
+    <footer>
+        <div class="copyright">
+            This is a fake site. It's meant to model the real <a href="https://pypi.org">pypi.org</a>
+        </div>
+    </footer>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div metal:define-slot="additional-js" tal:omit-tag></div>
+</body>
+</html>
